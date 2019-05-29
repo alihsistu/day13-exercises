@@ -6,12 +6,14 @@
 
 require "byebug"
 
-def prime(num)
+def prime?(num)
     return false if num < 2
 
-    (2...num).each do |factor|
-        if num % factor == 0
+    (2..num).each do |factor|
+        if num % factor == 0 
             return false
+        # elsif num%2==0 && num%3==0
+        #     return false
         else
             return true
         end

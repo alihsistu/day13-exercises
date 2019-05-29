@@ -7,12 +7,13 @@ require "byebug"
 
 def fuzz_buzz(num)
     numbers = []
-
+    answer = []
+    # byebug
     (1..num).each do |i|
-        if i % 3 != 0 || i % 5 != 0
-            numbers << i
+        if i % 3 != 0 && i % 5 != 0
+            answer = numbers << i
         end
     end
 
-    numbers
+    return answer
 end
